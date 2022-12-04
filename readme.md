@@ -1,21 +1,21 @@
 # GIT Course
 
 > git config --global user.name "Nicolas Correa"
-
+>
 > git config --global user.email "correan10@gmail.com"
-
+>
 > git config --list
-
+>
 > git init
-
+>
 > git status
-
+>
 > "git add ." or "git add somefile.txt"
 
 This will remove a file from the staging area:
 
 > git reset .
-
+>
 > git commit -m "message that goes with the commit"
 
 Will show details on all past commits, and which one is HEAD:
@@ -25,7 +25,7 @@ Will show details on all past commits, and which one is HEAD:
 Will list all current remotes configured in the local repository:
 
 > git remote
-
+>
 > git remote add origin https://.......
 
 As saying push the main local branch to origin. And by adding only once the flag '-u', this allows to not need to specify 'origin main' when doing 'git pull':
@@ -72,13 +72,12 @@ Will move us back to the latest branch I was in. This is in case I went to main 
 
 > git checkout -
 
-<br>
-
 ## HOW MERGE CONFLICTS HAPPEN
 
 We create a branch and go to it
 
-> git branch feature-10 <br>
+> git branch feature-10
+>
 > git checkout feature-10
 
 We modify for example line 10 in a file and commit it
@@ -103,26 +102,28 @@ We can check the difference also via command line
 
 Once the merge conflict is solved (i.e. using VS Code) I need to commit again the resolution I chose
 
-> git commit -am 'changed bla bla bla' <br>
+> git commit -am 'changed bla bla bla'
+>
 > git push origin main
 
 If I choose to abort the merge I can use
 
 > git merge --abort
 
-<hr>
-<u>NOTE</u>: Forking a repo will copy that repo to your Github account. It maintains a link to the original repo so you can fetch updates, and will set-up as the upstream.
+---
+
+**NOTE**: Forking a repo will copy that repo to your Github account. It maintains a link to the original repo so you can fetch updates, and will set-up as the upstream.
 
 A common thing is that developers may then submit a PR to merge that code into the original, and then the author will decide whether to accept it or not.
 
-<hr>
+---
 
 ## MORE ON GIT RESET
 
-<br>
 If I want to unstaged a file that was staged, as explained before I use one of these two:
 
-> git reset filename.txt <br>
+> git reset filename.txt
+>
 > git reset .
 
 BUT, I can also go back to a previous commit if I also committed a wrong file, and not just staged it. I can do that by looking at the id of that previous commit:
@@ -137,11 +138,10 @@ This way I will go back to seeing all the files along with the modifications I d
 
 > git reset --hard the-id-of-the-commit
 
-<br>
-<b> What about GIT REVERT? </b>
+**What about GIT REVERT?**
 
 There is a command that will allow you to still revert changes, should you have pushed those to the remote repo. Compared to 'git reset' this command will DO NOT remove the wrong commit-id but leave it in the log, and create a new commit-id with the previous (healthy) commit instead.
 
 > git revert the-id-of-the-commit-that-I-want-to-remove
 
-<b>PAY ATTENTION</b> here because in the 'git reset' I use the commit-id that I want to go back to, whereas in 'git revert' I use the commit-id that I want to remove.
+**PAY ATTENTION** here because in the 'git reset' I use the commit-id that I want to go back to, whereas in 'git revert' I use the commit-id that I want to remove.
