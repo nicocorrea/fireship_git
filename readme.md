@@ -173,3 +173,9 @@ If you want to save your work for later, whether it was staged already or not, w
 Using it this way allows you to associate a name to it:
 
 > git stash save cool-stuff
+
+And I can go back to it by using either 'pop' which will get the most recent item in the list, or else the 'apply' follow by the index of the stash in the list.
+
+> git stash pop
+>
+> git stash apply 1
