@@ -200,10 +200,8 @@ From a feature branch, rebase the latest changes from the master branch. This ma
 
 ## **GIT SQUASH**
 
-If I have been creating a couple of commits that were simple changes, it may not make much sense to push all as this will show all of them in the remote repo and maybe more work for the understanding of what's been added in between them (and why). Added on main1. 2.
+If I have been creating a couple of commits that were simple changes, it may not make much sense to push all as this will show all of them in the remote repo and maybe more work for the understanding of what's been added in between them (and why).
 
 > git rebase -i origin/main
 
 **NOTE**: The 'origin/main' here is eventually those two that need to be rebased. It can be origin/feature-branch.
-
-added on test_merge
