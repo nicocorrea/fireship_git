@@ -22,6 +22,10 @@ Will show details on all past commits, and which one is HEAD:
 
 > git log
 
+and if I would like to have a better view of it, I'd rather use:
+
+> git log --graph --oneline --decorate
+
 Will list all current remotes configured in the local repository:
 
 > git remote
@@ -195,7 +199,8 @@ From a feature branch, rebase the latest changes from the master branch. This ma
 
 ## **GIT SQUASH**
 
-If I have been creating a couple of commits that were simple changes, it may not make much sense to push all as this will show all of them in the remote repo.
+If I have been creating a couple of commits that were simple changes, it may not make much sense to push all as this will show all of them in the remote repo and maybe more work for the understanding of what's been added in between them (and why).
 
-test
-ftret
+> git rebase -i origin/main
+
+**NOTE**: The 'origin/main' here is eventually those two that need to be rebased. It can be origin/feature-branch.
