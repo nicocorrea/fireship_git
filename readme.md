@@ -117,7 +117,7 @@ A common thing is that developers may then submit a PR to merge that code into t
 
 <hr>
 
-## MORE ON GIT RESET
+### MORE ON GIT RESET
 
 <br>
 If I want to unstaged a file that was staged, as explained before I use one of these two:
@@ -136,10 +136,3 @@ and then using:
 This way I will go back to seeing all the files along with the modifications I did. Here's a more advanced and dangerous way. If I want to go back to that previous commit AND forget about all changes (including new files I might have created) I can use the following command, and it will destroy them (= no delta). This MUST NOT be used if those commit has already been pushed as it will otherwise will create a situation where developers will be working on code that most probably no longer will be there after you push the new commit you will create without them:
 
 > git reset --hard the-id-of-the-commit
-
-<br>
-<b> What about GIT REVERT? </b>
-
-There is a command that will allow you to still revert changes, should you have pushed those to the remote repo. Compared to 'git reset' this command will do not remote the wrong commit-id but leave it in the log, and create a new commit-id with the previous (healthy) commit instead.
-
-> git rever the-id-of-the-commit
