@@ -142,4 +142,4 @@ This way I will go back to seeing all the files along with the modifications I d
 
 There is a command that will allow you to still revert changes, should you have pushed those to the remote repo. Compared to 'git reset' this command will do not remote the wrong commit-id but leave it in the log, and create a new commit-id with the previous (healthy) commit instead.
 
-> git rever the-id-of-the-commit
+> git rever the-id-of-the-commit-that-I-want-to-remove
