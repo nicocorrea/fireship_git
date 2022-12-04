@@ -109,3 +109,30 @@ Once the merge conflict is solved (i.e. using VS Code) I need to commit again th
 If I choose to abort the merge I can use
 
 > git merge --abort
+
+<hr>
+<u>NOTE</u>: Forking a repo will copy that repo to your Github account. It maintains a link to the original repo so you can fetch updates, and will set-up as the upstream.
+
+A common thing is that developers may then submit a PR to merge that code into the original, and then the author will decide whether to accept it or not.
+
+<hr>
+
+### MORE ON GIT RESET
+
+<br>
+If I want to unstaged a file that was staged, as explained before I use one of these two:
+
+> git reset filename.txt <br>
+> git reset .
+
+BUT, I can also go back to a previous commit if I also committed a wrong file, and not just staged it. I can do that by looking at the id of that previous commit:
+
+> git log
+
+and then using:
+
+> git reset the-id-of-the-commit
+
+This way I will go back to seeing all the files along with the modifications I did. Here's a more advanced and dangerous way. If I want to go back to that previous commit AND forget about all changes (including new files I might have created) I can use the following command, and it will destroy them (= no delta). This MUST NOT be used if those commit has already been pushed as it will otherwise will create a situation where developers will be working on code that most probably no longer will be there after you push the new commit you will create without them:
+
+> git reset --hard the-id-of-the-commit
