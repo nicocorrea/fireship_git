@@ -32,4 +32,16 @@ git merge origin/master -> Will merge those changes that fetched before. I can l
 
 git pull -> Will simply do both 'git fetch' and 'git merge'. It is safe to use this approach.
 
-test
+git clone repo-url local-directory -> Will clone the repo, and the local-directory specification is optional. If I put something (i.e. 'demo'), it will create a folder named 'demo' and then clone the repo inside it.
+
+git branch -> Will list all branches.
+
+git branch feature-10 -> Will create a branch named 'feature-10'
+
+git branch -d feature-10 -> Will delete the branch if it has not been merged into the main branch. Capital D does not care about it.
+
+git checkout feature-10 -> Will switch us from the current branch to that one (i.e. feature-10).
+
+git checkout -b feature-10 -> Will create the branch and checkout to it directly.
+
+git checkout - -> Will move us back to the latest branch I was in. This is in case I went to main and need to go back to the previous one and I forgot its name.
