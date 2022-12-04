@@ -191,6 +191,7 @@ And I can go back to it by using either 'pop' which will get the most recent ite
 From a feature branch, rebase the latest changes from the master branch. This makes it look like I started working on this feature from the code on the latest commit on the main branch.
 
 > git checkout feature-branch
+>
 > git rebase
 
 **NOTE**: Considering what this means when working with teams, it might be safer to create an extra branch from the current feature, do rebase there, and if all works well, remove the temporary feature branch and rebase my feature branch, and continue from there.
@@ -204,3 +205,5 @@ If I have been creating a couple of commits that were simple changes, it may not
 > git rebase -i origin/main
 
 **NOTE**: The 'origin/main' here is eventually those two that need to be rebased. It can be origin/feature-branch.
+
+this is the test branch
