@@ -204,5 +204,3 @@ If I have been creating a couple of commits that were simple changes, it may not
 > git rebase -i origin/main
 
 **NOTE**: The 'origin/main' here is eventually those two that need to be rebased. It can be origin/feature-branch.
-
-new test added in here
