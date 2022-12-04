@@ -1,4 +1,4 @@
-# GIT Course
+# **GIT Course**
 
 > git config --global user.name "Nicolas Correa"
 >
@@ -72,7 +72,9 @@ Will move us back to the latest branch I was in. This is in case I went to main 
 
 > git checkout -
 
-## HOW MERGE CONFLICTS HAPPEN
+---
+
+## **HOW MERGE CONFLICTS HAPPEN**
 
 We create a branch and go to it
 
@@ -118,7 +120,7 @@ A common thing is that developers may then submit a PR to merge that code into t
 
 ---
 
-## MORE ON GIT RESET
+## **MORE ON GIT RESET**
 
 If I want to unstaged a file that was staged, as explained before I use one of these two:
 
@@ -145,3 +147,23 @@ There is a command that will allow you to still revert changes, should you have 
 > git revert the-id-of-the-commit-that-I-want-to-remove
 
 **PAY ATTENTION** here because in the 'git reset' I use the commit-id that I want to go back to, whereas in 'git revert' I use the commit-id that I want to remove.
+
+---
+
+## **GIT AMEND**
+
+If I need to amend the message of a commit I can use:
+
+> git commit --amend -m "better message"
+
+And if I forgot to add a file, instead of using 'git reset' I can use:
+
+> git add filename.txt
+>
+> git commit --amend --no-edit
+
+---
+
+## **GIT STASH**
+
+If you want to save your work for later without committing it, like something experimental to work on later.
