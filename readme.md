@@ -140,6 +140,8 @@ This way I will go back to seeing all the files along with the modifications I d
 <br>
 <b> What about GIT REVERT? </b>
 
-There is a command that will allow you to still revert changes, should you have pushed those to the remote repo. Compared to 'git reset' this command will do not remote the wrong commit-id but leave it in the log, and create a new commit-id with the previous (healthy) commit instead.
+There is a command that will allow you to still revert changes, should you have pushed those to the remote repo. Compared to 'git reset' this command will DO NOT remove the wrong commit-id but leave it in the log, and create a new commit-id with the previous (healthy) commit instead.
 
-> git rever the-id-of-the-commit-that-I-want-to-remove
+> git revert the-id-of-the-commit-that-I-want-to-remove
+
+<b>PAY ATTENTION</b> here because in the 'git reset' I use the commit-id that I want to go back to, whereas in 'git revert' I use the commit-id that I want to remove.
