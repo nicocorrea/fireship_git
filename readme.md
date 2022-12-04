@@ -43,8 +43,43 @@ git checkout feature-10 -> Will switch us from the current branch to that one (i
 git checkout -b feature-10 -> Will create the branch and checkout to it directly.
 
 git checkout - -> Will move us back to the latest branch I was in. This is in case I went to main and need to go back to the previous one and I forgot its name.
-<<<<<<< HEAD
-another change on line 46
-=======
-change at line 46
->>>>>>> feature
+
+<br>
+
+## HOW MERGE CONFLICTS HAPPEN
+
+<hr>
+
+We create a branch and go to it
+
+> git branch feature-10 <br>
+> git checkout feature-10
+
+We modify for example line 10 in a file and commit it
+
+> git commit -am 'modified bla bla'
+
+We go to main
+
+> git checkout main
+
+We modify the same line in the same file and commit it
+
+> git commit -am 'modified bla bla bla'
+
+When we merge, we get a conflict, and VS Code will show it.
+
+> git merge feature-10
+
+We can check the difference also via command line
+
+> git diff
+
+Once the merge conflict is solved (i.e. using VS Code) I need to commit again the resolution I chose
+
+> git commit -am 'changed bla bla bla' <br>
+> git push origin main
+
+If I choose to abort the merge I can use
+
+> git merge --abort
