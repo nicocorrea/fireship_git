@@ -31,3 +31,5 @@ git fetch -> Will capture the changes from the remote repo compared to those fro
 git merge origin/master -> Will merge those changes that fetched before. I can look in VS Code for the branches and I should see different commit identifiers if there's anything to merge from remote to local, after the 'git fetch' was executed.
 
 git pull -> Will simply do both 'git fetch' and 'git merge'. It is safe to use this approach.
+
+test
