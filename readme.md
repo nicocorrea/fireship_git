@@ -48,8 +48,6 @@ git checkout - -> Will move us back to the latest branch I was in. This is in ca
 
 ## HOW MERGE CONFLICTS HAPPEN
 
-<hr>
-
 We create a branch and go to it
 
 > git branch feature-10 <br>
