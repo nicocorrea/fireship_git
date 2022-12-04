@@ -166,4 +166,10 @@ And if I forgot to add a file, instead of using 'git reset' I can use:
 
 ## **GIT STASH**
 
-If you want to save your work for later without committing it, like something experimental to work on later.
+If you want to save your work for later, whether it was staged already or not, without committing it, like something experimental to work on later, you can use the following command which will delete AND save the changes in a list of stashes:
+
+> git stash
+
+Using it this way allows you to associate a name to it:
+
+> git stash save cool-stuff
