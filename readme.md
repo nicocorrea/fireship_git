@@ -1,6 +1,4 @@
-## Getting Ready
-
-<hr>
+# This are all GIT commands from the course in Fireship
 
 git config --global user.name "Nicolas Correa"
 
