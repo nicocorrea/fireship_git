@@ -43,4 +43,8 @@ git checkout feature-10 -> Will switch us from the current branch to that one (i
 git checkout -b feature-10 -> Will create the branch and checkout to it directly.
 
 git checkout - -> Will move us back to the latest branch I was in. This is in case I went to main and need to go back to the previous one and I forgot its name.
+<<<<<<< HEAD
 another change on line 46
+=======
+change at line 46
+>>>>>>> feature
